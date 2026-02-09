@@ -1,0 +1,49 @@
+.message-bg {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #101820, #1f3c4f, #2c5364);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.message-card {
+  background: rgba(255, 255, 255, 0.1) !important;
+  padding: 40px 30px;
+  border-radius: 30px !important;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  color: white !important;
+  animation: pop 0.6s ease;
+}
+
+.message-text {
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  animation: glow 1.2s infinite alternate;
+}
+
+.tap-text {
+  font-size: 30px;
+  opacity: 0.8;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 8px #f0f574;
+  }
+  to {
+    text-shadow: 0 0 16px #000000;
+  }
+}

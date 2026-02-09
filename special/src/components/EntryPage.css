@@ -1,0 +1,93 @@
+.entry-bg {
+    background: linear-gradient(135deg, #101820, #1f3c4f, #2c5364);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.entry-card {
+    padding: 50px 40px !important;
+    border-radius: 32px !important;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.079) !important;
+    backdrop-filter: blur(12px);
+    color: white !important;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45) !important;
+    animation: pop 0.8s ease;
+    width: 90%;
+    max-width: 420px;
+}
+
+@keyframes pop {
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.heart-icon {
+    font-size: 70px !important;
+    color: #e5da0e;
+    animation: beat 1.4s infinite;
+}
+
+@keyframes beat {
+
+
+    
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.25);
+    }
+}
+
+.entry-title {
+    margin-top: 18px !important;
+    font-weight: 700 !important
+}
+
+.entry-subtitle {
+    margin-top: 14px !important;
+    opacity: 0.85;
+    line-height: 1.6;
+}
+
+.entry-btn {
+    margin-top: 30px !important;
+    background-color: #e5da0e !important;
+    border-radius: 24px !important;
+    padding: 10px 28px !important;
+    font-weight: bold !important;
+    font-size: 15px !important;
+    color: #1f3c4f !important;
+}
+.entry-btn:hover{
+    background-color: #eeff00 !important;
+    transform: scale(1.05);
+    transition: 0.3s;
+    color: #1f3c4f !important;
+}
+
+@media(max-width: 480px){
+    .entry-card{
+        padding: 35px 25px !important;
+    }
+
+    .entry-title{
+        font-size: 22px !important;
+    }
+
+    .heart-icon{
+        font-size: 50px !important
+    }
+}

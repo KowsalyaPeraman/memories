@@ -1,0 +1,94 @@
+.surprise-bg {
+  min-height: 100vh;
+   background: linear-gradient(135deg, #101820, #1f3c4f, #2c5364);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.surprise-card {
+  background: rgba(255, 255, 255, 0.079) !important;
+  padding: 40px 30px;
+  border-radius: 32px !important;
+  text-align: center;
+  backdrop-filter: blur(12px);
+  width: 90%;
+  max-width: 450px;
+  color: white !important;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45) !important;
+  animation: pop 0.8s ease;
+  text-shadow: 0 0 8px #4a4a48, 0 0 12px #79797a;
+}
+
+.surprise-msg {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 18px;
+  color: #ffffff;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.surprise-msg:hover {
+  transform: scale(1.05);
+  color: #000000;
+}
+
+.grand-img {
+  width: 250px;
+  max-width: 90%;
+  border-radius: 20px;
+  margin: 20px 0;
+  animation: grandPop 0.5s ease forwards;
+}
+
+.grand-msg {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  animation: textGlow 1.2s ease-in-out infinite alternate;
+}
+
+.next-btn {
+  margin-top: 20px;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 20px;
+  background-color: #e5da0e !important;
+  color: #1f3c4f !important;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.next-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 15px #e0e0e0;
+}
+
+
+@keyframes pop {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes beat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.25); }
+}
+
+@keyframes grandPop {
+  from { transform: scale(0.5) rotate(-10deg); opacity: 0; }
+  to { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+@keyframes textGlow {
+  from { text-shadow: 0 0 8px #1e1e15, 0 0 12px #dde724; }
+  to { text-shadow: 0 0 15px #575757, 0 0 25px #ffe347; }
+}
+
+@media(max-width:480px){
+  .heart-icon{ font-size:50px; }
+  .grand-img{ width:180px; }
+  .grand-msg{ font-size:16px; }
+}
